@@ -1,0 +1,50 @@
+[
+  {
+    "id": "p1",
+    "name": "示例 · 个人主页",
+    "url": "https://example.com/portfolio",
+    "cover": "/covers/cover-01.svg"
+  },
+  {
+    "id": "p2",
+    "name": "文档站示例",
+    "url": "https://example.com/docs",
+    "cover": "/covers/cover-02.svg"
+  },
+  {
+    "id": "p3",
+    "name": "设计系统",
+    "url": "https://example.com/design-system",
+    "cover": "/covers/cover-03.svg"
+  },
+  {
+    "id": "p4",
+    "name": "示例 · 数据看板",
+    "url": "https://example.com/analytics",
+    "cover": "/covers/cover-04.svg"
+  },
+  {
+    "id": "p5",
+    "name": "组件库",
+    "url": "https://example.com/components",
+    "cover": "/covers/cover-05.svg"
+  },
+  {
+    "id": "p6",
+    "name": "示例 · API Playground",
+    "url": "https://example.com/api-playground",
+    "cover": "/covers/cover-06.svg"
+  },
+  {
+    "id": "p7",
+    "name": "内部工具台",
+    "url": "https://example.com/internal-tools",
+    "cover": "/covers/cover-07.svg"
+  },
+  {
+    "id": "p8",
+    "name": "示例 · 营销落地页",
+    "url": "https://example.com/landing",
+    "cover": "/covers/cover-08.svg"
+  }
+]
