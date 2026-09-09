@@ -1,0 +1,62 @@
+[
+  {
+    "id": "tools",
+    "name": "日常工具集",
+    "url": "https://tools.huatuo.cloud/",
+    "cover": "/covers/日常工具集.png"
+  },
+  {
+    "id": "geekppt",
+    "name": "GeekPPT",
+    "url": "https://ppt.huatuo.cloud/",
+    "cover": "/covers/GeekPPT.png"
+  },
+  {
+    "id": "eat",
+    "name": "PK吃什么",
+    "url": "https://eat.huatuo.cloud/",
+    "cover": "/covers/PK吃什么.png"
+  },
+  {
+    "id": "suan",
+    "name": "国学占卜",
+    "url": "https://suan.huatuo.cloud/",
+    "cover": "/covers/国学占卜.png"
+  },
+  {
+    "id": "poker",
+    "name": "德州记分",
+    "url": "https://poker.huatuo.cloud/",
+    "cover": "/covers/德州记分.png"
+  },
+  {
+    "id": "cook",
+    "name": "私房菜谱",
+    "url": "https://cook.huatuo.cloud/",
+    "cover": "/covers/私房菜谱.png"
+  },
+  {
+    "id": "xiabai",
+    "name": "瞎掰王",
+    "url": "https://xiabai.huatuo.cloud/",
+    "cover": "/covers/瞎掰王.png"
+  },
+  {
+    "id": "mines-cc",
+    "name": "扫雷-CC",
+    "url": "https://huatuo-dr.github.io/3DMinesweeperClaude/",
+    "cover": "/covers/扫雷-CC.png"
+  },
+  {
+    "id": "mines-trae",
+    "name": "扫雷-Trae",
+    "url": "https://huatuo-dr.github.io/3DMinesweeperTrae/",
+    "cover": "/covers/扫雷-Trae.png"
+  },
+  {
+    "id": "poker-odds",
+    "name": "德州胜率",
+    "url": "https://6bb43n64ww.coze.site/",
+    "cover": "/covers/德州胜率.png"
+  }
+]
