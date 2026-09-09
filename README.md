@@ -1,34 +1,43 @@
-# project_dashboard
+# 项目看板 (project_dashboard)
 
-Vite + Tailwind static project entry dashboard.
+个人项目入口看板：卡片展示名称与封面，点击封面新标签打开链接，「复制链接」写入剪贴板。链接全文不在页面展示。支持按名称搜索，无需登录，适配手机与桌面。
 
-## Setup
+## 本地启动
 
 ```bash
 npm i
 npm run dev
 ```
 
-Production build:
+构建：
 
 ```bash
 npm run build
 npm run preview
 ```
 
-## Edit project data
+## 维护项目数据
 
-Edit `public/projects.json`. Fields:
+1. 编辑 `public/projects.json`，追加或修改条目。
+2. 把封面图放到 `public/covers/`（文件名建议与项目名一致，如 `日常工具集.png`），并在 JSON 里写相对 `public/` 的路径（例如 `/covers/日常工具集.png`）。
+3. 刷新页面即可。
 
-- `id` — unique id
-- `name` — display name (search is case-insensitive on this field)
-- `url` — project link (cover opens in new tab; Copy Link writes clipboard; raw URL text is never shown)
-- `cover` — image path from site root, e.g. `/covers/cover-01.svg`
+字段约定：
 
-## Replace covers
+| 字段 | 说明 |
+| --- | --- |
+| `id` | 稳定唯一 ID |
+| `name` | 展示名称，也用于搜索 |
+| `url` | 跳转与复制用；页面不显示全文 |
+| `cover` | 封面路径 |
 
-Put images in `public/covers/` (SVG/PNG/JPG), then update the matching `cover` field in `projects.json`. Placeholder SVGs are included.
+## 线上部署
 
-## Layout
+部署方案（GitHub Pages + Actions + `board.huatuo.cloud`）见 [`docs/部署方案文档.md`](docs/部署方案文档.md)。
 
-Responsive grid: 1 column by default, 2 at `sm`, 3 at `lg`.
+- 默认：`https://huatuo-dr.github.io/project_dashboard/`
+- 自定义域：`https://board.huatuo.cloud/`（DNS / Pages 自定义域需仓库所有者配置）
+
+## 技术栈
+
+Vite + 原生 JS + Tailwind CSS。push `master` 经 GitHub Actions 部署到 Pages。
