@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-image:
+      radial-gradient(circle at top left, rgba(59, 130, 246, 0.08), transparent 40%),
+      radial-gradient(circle at top right, rgba(14, 165, 233, 0.06), transparent 35%);
+  }
+}
+
+@layer components {
+  .card-cover {
+    @apply block overflow-hidden rounded-2xl bg-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent;
+  }
+
+  .copy-btn {
+    @apply inline-flex min-h-11 min-w-[7.5rem] items-center justify-center rounded-xl border border-slate-200 bg-white px-3 py-2 text-sm font-medium text-ink-800 shadow-sm transition hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent active:scale-[0.98];
+  }
+
+  .copy-btn.is-success {
+    @apply border-emerald-300 bg-emerald-50 text-emerald-700;
+  }
+}
