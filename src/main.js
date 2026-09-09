@@ -6,11 +6,11 @@ const errorEl = document.getElementById('error')
 const searchInput = document.getElementById('search')
 let projects = []
 
-/** Resolve public assets for both Pages subpath and custom-domain root. */
+/** Resolve public assets for Pages subpath and custom-domain root. */
 function assetUrl(path) {
   const base = import.meta.env.BASE_URL || './'
   const cleaned = String(path).replace(/^\/+/, '')
-  return new URL(cleaned, base).href
+  return `${base}${cleaned}`
 }
 
 function isValidUrl(value) {
