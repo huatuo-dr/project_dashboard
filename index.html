@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>项目看板</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  </head>
+  <body class="min-h-screen bg-ink-50 text-ink-900 antialiased">
+    <div class="mx-auto max-w-6xl px-4 py-8 sm:px-6 lg:px-8">
+      <header class="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="text-sm font-medium uppercase tracking-[0.2em] text-slate-500">Personal</p>
+          <h1 class="mt-1 text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">项目看板</h1>
+          <p class="mt-2 max-w-xl text-sm text-slate-600 sm:text-base">集中展示可访问的项目入口。点封面打开，点按钮复制链接。</p>
+        </div>
+        <label class="relative block w-full sm:max-w-xs">
+          <span class="sr-only">搜索项目</span>
+          <input
+            id="search"
+            type="search"
+            placeholder="搜索项目名称…"
+            autocomplete="off"
+            class="w-full rounded-2xl border border-slate-200 bg-white py-3 pl-11 pr-4 text-base shadow-sm outline-none ring-accent/30 transition placeholder:text-slate-400 focus:border-accent focus:ring-4"
+          />
+          <svg class="pointer-events-none absolute left-3.5 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" stroke-linecap="round" />
+          </svg>
+        </label>
+      </header>
+      <main>
+        <div id="grid" class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3"></div>
+        <p id="empty" class="mt-16 hidden text-center text-slate-500">没有匹配的项目，换个关键词试试。</p>
+        <p id="error" class="mt-16 hidden text-center text-rose-600">加载项目数据失败，请检查 public/projects.json。</p>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
