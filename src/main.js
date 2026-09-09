@@ -6,6 +6,13 @@ const errorEl = document.getElementById('error')
 const searchInput = document.getElementById('search')
 let projects = []
 
+/** Resolve public assets for both Pages subpath and custom-domain root. */
+function assetUrl(path) {
+  const base = import.meta.env.BASE_URL || './'
+  const cleaned = String(path).replace(/^\/+/, '')
+  return new URL(cleaned, base).href
+}
+
 function isValidUrl(value) {
   try {
     const u = new URL(value)
@@ -59,7 +66,7 @@ function createCard(project) {
     win.open(project.url, '_blank', 'noopener,noreferrer')
   })
   const img = document.createElement('img')
-  img.src = project.cover
+  img.src = assetUrl(project.cover)
   img.alt = project.name + ' 封面'
   img.loading = 'lazy'
   img.className = 'h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]'
@@ -113,7 +120,7 @@ function applySearch() {
 
 async function init() {
   try {
-    const res = await fetch('/projects.json', { cache: 'no-store' })
+    const res = await fetch(assetUrl('projects.json'), { cache: 'no-store' })
     if (!res.ok) throw new Error('HTTP ' + res.status)
     const data = await res.json()
     projects = normalizeProjects(data)
