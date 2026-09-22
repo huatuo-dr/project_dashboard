@@ -64,5 +64,11 @@
     "name": "吉他曲谱",
     "url": "https://guitar.huatuo.cloud/",
     "cover": "/covers/吉他曲谱.png"
+  },
+  {
+    "id": "reading-quotes",
+    "name": "摘抄",
+    "url": "https://read.huatuo.cloud/",
+    "cover": "/covers/摘抄.png"
   }
 ]
